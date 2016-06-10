@@ -52,7 +52,7 @@ void loop()
                         client.println("if (this.readyState == 4) {");
                         client.println("if (this.status == 200) {");
                         client.println("if (this.responseText != null) {");
-                        client.println("document.getElementById(\"res\")\.innerHTML = this.responseText;");
+                        client.println("document.getElementById(\"res\").innerHTML = this.responseText;");
                         client.println("}}}}");
                         // ajax(arduino)Asynchronous communication
                         client.println("request.open(\"GET\", \"tokuocheck\", true);");
