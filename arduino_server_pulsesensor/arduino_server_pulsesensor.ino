@@ -57,6 +57,8 @@ void loop()
                         // ajax(arduino)Asynchronous communication
                         client.println("request.open(\"GET\", \"tokuocheck\", true);");
                         client.println("request.send(null);");
+                        // very very important!! 
+                        client.println("setTimeout('getvalue()', 1000);");
                         client.println("}");
                         client.println("</script>");
                         client.println("</head>");
@@ -92,5 +94,8 @@ void loop()
 
 // send the value(ajax receive this)
 void getvaluemain(EthernetClient e){
-  e.println(analogRead(0));
-  }
+  if(analogRead(0)){
+    e.println(analogRead(0));
+  }else{
+    e.println(":::");
+  }}
