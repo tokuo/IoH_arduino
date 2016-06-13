@@ -2,7 +2,7 @@
 #include <Ethernet2.h>
 
 byte mac[] = {0x90, 0xA2, 0xDA, 0x10, 0x6A, 0x19};
-IPAddress ip(192,168,10,112);
+IPAddress ip(192,168,10,105);
 EthernetServer server(80);
 
 void setup()
@@ -91,6 +91,6 @@ void loop()
 }
 
 // send the value(ajax receive this)
-void getValuemain(EthernetClient e){
-  client.println(analogRead(0));
+void getvaluemain(EthernetClient e){
+  e.println(analogRead(0));
   }
