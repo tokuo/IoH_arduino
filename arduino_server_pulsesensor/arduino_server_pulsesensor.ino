@@ -2,7 +2,7 @@
 #include <Ethernet2.h>
 
 byte mac[] = {0x90, 0xA2, 0xDA, 0x10, 0x6A, 0x19};
-IPAddress ip(192,168,10,105);
+IPAddress ip(192,168,10,115);
 EthernetServer server(80);
 
 void setup()
